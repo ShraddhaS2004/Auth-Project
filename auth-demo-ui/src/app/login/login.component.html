@@ -1,0 +1,14 @@
+<div class="form-container">
+  <div class="login-container">
+    <h2>Login</h2>
+    
+    <div *ngIf="error" class="error-message">{{ error }}</div>
+
+    <input type="email" placeholder="Email" [(ngModel)]="user.email" [disabled]="isLoading"><br>
+    <input type="password" placeholder="Password" [(ngModel)]="user.password" [disabled]="isLoading"><br>
+
+    <button (click)="login()" [disabled]="isLoading">
+      {{ isLoading ? 'Logging In...' : 'Login' }}
+    </button>
+  </div>
+</div>

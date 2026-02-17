@@ -1,0 +1,107 @@
+:host {
+  display: block;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.signup-container {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-container:hover {
+  box-shadow: 0 20px 25px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+h2 {
+  color: var(--primary-green);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-left: 4px solid #dc2626;
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: var(--transition);
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  background: var(--very-light-green);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+input:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+input::placeholder {
+  color: var(--text-light);
+}
+
+button {
+  width: 100%;
+  padding: 12px 24px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow);
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(16, 185, 129, 0.3);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.2);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

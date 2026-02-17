@@ -1,0 +1,87 @@
+:host {
+  display: block;
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.welcome-card {
+  background: var(--white);
+  padding: 60px 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  transition: var(--transition);
+  max-width: 500px;
+}
+
+.welcome-card:hover {
+  box-shadow: 0 20px 25px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+.welcome-header {
+  margin-bottom: 30px;
+}
+
+.welcome-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+  display: block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+h1 {
+  color: var(--primary-green);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  word-break: break-word;
+}
+
+.welcome-text {
+  color: var(--text-light);
+  font-size: 16px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow);
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(16, 185, 129, 0.3);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.2);
+}
